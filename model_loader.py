@@ -11,4 +11,4 @@ def encode(text):
 
     # Pooling : moyenne sur les tokens
     embeddings = model_output.last_hidden_state.mean(dim=1)
-    return embeddings[0]
+    return embeddings[0].tolist()
